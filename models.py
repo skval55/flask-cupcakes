@@ -13,7 +13,7 @@ def connect_db(app):
 
 
 class Cupcake(db.Model):
-    """model for cupcake"""
+    """model for cupcake""" 
 
     __tablename__ = 'cupcakes'
 

@@ -52,6 +52,8 @@ def post_cupcake():
 
     flavor = request.json['flavor']
     image = request.json['image']
+    if image == "":
+        image = None
     rating = request.json['rating']
     size = request.json['size']
 
@@ -86,6 +88,12 @@ def delete_cupcake(cupcake_id):
 
     return jsonify(message = "Deleted")
 
+
+@app.route('/')
+def home_page():
+    """show home page"""
+
+    return render_template('index.html')
 
 
 
